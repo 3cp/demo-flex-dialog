@@ -18,7 +18,7 @@
 }
 
 .ux-dialog-flex ux-dialog ux-dialog-header,
-ux-dialog.ux-dialog-flex ux-dialog-footer {
+.ux-dialog-flex ux-dialog ux-dialog-footer {
   flex: 0 0 auto; /* don't grow/shrink header and footer */
 }
 
