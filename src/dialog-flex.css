@@ -1,0 +1,28 @@
+.ux-dialog-flex ux-dialog-container {
+  overflow-x: hidden;
+  overflow-y: hidden; /* remove scroll bar from outer container */
+}
+
+.ux-dialog-flex ux-dialog-container > div,
+.ux-dialog-flex ux-dialog-container > div > div {
+  box-sizing: border-box;
+  height: 100%; /* full size wrapper */
+}
+
+.ux-dialog-flex ux-dialog {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* make header body footer same width */
+  max-height: 100%; /* fit header and footer in current window size */
+}
+
+.ux-dialog-flex ux-dialog ux-dialog-header,
+ux-dialog.ux-dialog-flex ux-dialog-footer {
+  flex: 0 0 auto; /* don't grow/shrink header and footer */
+}
+
+.ux-dialog-flex ux-dialog ux-dialog-body {
+  flex: 0 1 auto; /* init height is auto, and shrinkable */
+  overflow-y: auto; /* the scroll bar */
+}
